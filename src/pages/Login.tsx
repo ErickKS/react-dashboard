@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Logo } from "../Logo";
+import { LogoLogin } from "../Logo";
 import { Input } from "../components/Input";
 import { Checkbox } from "../components/Checkbox";
 import { Button } from "../components/Button";
@@ -14,6 +14,7 @@ const userLogin = {
 
 export function Login() {
   const navigate = useNavigate();
+
   const usernameIcon = document.getElementById(
     "usernameIcon"
   ) as HTMLElement | null;
@@ -50,14 +51,14 @@ export function Login() {
 
       setPasswordData("");
     } else {
-      navigate("/dashboard");
+      navigate("/main");
     }
   }
 
   return (
     <div className="w-screen h-screen bg-gray-900 flex flex-col items-center justify-center text-gray-100">
       <header className="flex flex-col items-center justify-center">
-        <Logo />
+        <LogoLogin />
 
         <h1 className="text-2xl font-semibold">Dashboard</h1>
         <p className="text-sm">Sing in to continue!</p>
