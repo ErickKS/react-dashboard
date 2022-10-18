@@ -22,7 +22,7 @@ module.exports = {
 
       red: {
         800: "#9c0303",
-      }
+      },
     },
 
     fontSize: {
@@ -37,6 +37,21 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: "Inter, sans-serif",
+      },
+      keyframes: {
+        fade: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(15px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        fade: "fade .2s",
       },
     },
   },
