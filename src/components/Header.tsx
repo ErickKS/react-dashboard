@@ -1,5 +1,4 @@
 import * as Popover from "@radix-ui/react-popover";
-import { Link } from "react-router-dom";
 import { Bell, SignOut, X } from "phosphor-react";
 
 interface HeaderProps {
@@ -7,7 +6,7 @@ interface HeaderProps {
 }
 
 export function Header({ title }: HeaderProps) {
-  function handleNotifications(event: any) {
+  function handleNotifications() {
     const notification = document.getElementById(
       "notificationPing"
     ) as HTMLElement;
@@ -50,12 +49,12 @@ export function Header({ title }: HeaderProps) {
               <Popover.Arrow className="fill-gray-400" />
             </Popover.Content>
           </Popover.Root>
-          <Link to="/" title="Logout">
+          <a href="/" title="Logout">
             <SignOut
               size={24}
               className="cursor-pointer transition-colors hover:text-cyan-500"
             />
-          </Link>
+          </a>
         </div>
       </h2>
     </header>
