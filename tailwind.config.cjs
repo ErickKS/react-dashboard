@@ -53,6 +53,9 @@ module.exports = {
       animation: {
         fade: "fade .2s",
       },
+      boxShadow: {
+        "card-inset": "inset 3px 0 0 0 #61DAFB",
+      },
     },
   },
   plugins: [],
