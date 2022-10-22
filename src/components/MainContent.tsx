@@ -54,7 +54,7 @@ export function MainContent() {
         <div className="flex flex-col gap-6">
           <div className="overflow-hidden rounded-lg">
             <img
-              src="./message2.jpg"
+              src="./message.jpg"
               alt="inspirational message"
               className="w-full transition-transform hover:scale-110"
             />
