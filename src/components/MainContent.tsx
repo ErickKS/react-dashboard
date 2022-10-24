@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Header } from "./Header";
 import { MainCard } from "./MainCard";
+
 import { DoughnutChat } from "./Charts/Doughnut";
-import { PortfolioData } from "../context/ChartsData";
+import { LineSalesChart } from "./Charts/LineSales";
+import { PortfolioData, SalesData, CountryData } from "../context/ChartsData";
+
 import {
   CurrencyDollar,
   TrendDown,
@@ -10,6 +13,7 @@ import {
   UserPlus,
   Wallet,
 } from "phosphor-react";
+import { BarCountryChart } from "./Charts/BarCountry";
 
 export function MainContent() {
   const [portfolioData, setPortfolioData] = useState({
@@ -21,6 +25,38 @@ export function MainContent() {
         cutout: "85%",
         borderWidth: 4,
         borderColor: "transparent",
+        hoverOffset: 6,
+      },
+    ],
+  });
+
+  const [salesData, setSalesData] = useState({
+    labels: SalesData.map((data) => data.month),
+    datasets: [
+      {
+        label: "Sales",
+        data: SalesData.map((data) => data.sales),
+        borderColor: "#61DAFB",
+        backgroundColor: "#61DAFB",
+        lineTension: 0.4,
+        radius: 5,
+        fill: {
+          target: "origin",
+          above: "#61dafb2b",
+        },
+      },
+    ],
+  });
+
+  const [countryData, setCountryData] = useState({
+    labels: CountryData.map((data) => data.country),
+    datasets: [
+      {
+        label: "Sales",
+        data: CountryData.map((data) => data.sales),
+        backgroundColor: "#61dafb2b",
+        borderColor: "#61DAFB",
+        borderWidth: 2,
       },
     ],
   });
@@ -30,7 +66,8 @@ export function MainContent() {
       <Header title="Dashboard" />
 
       <div className="grid grid-cols-[1fr_288px] gap-9">
-        <div>
+        {/* LEFT COLUMN */}
+        <div className="flex flex-col gap-6">
           <div className="grid grid-cols-4 gap-6">
             <MainCard amount="$ 9.800">
               <Wallet size={32} />
@@ -44,13 +81,25 @@ export function MainContent() {
               <TrendDown size={32} />
               Expenses
             </MainCard>
-            <MainCard amount="+ 32">
+            <MainCard amount="+ 14">
               <UserPlus size={32} />
               Clients
             </MainCard>
           </div>
+
+          <div className="grid gap-6 grid-cols-2">
+            <div className="bg-gray-800 text-gray-100 px-6 py-4 rounded">
+              <h2 className="text-lg text-center mb-4">Sales Overview</h2>
+              <LineSalesChart chartData={salesData} />
+            </div>
+            <div className="bg-gray-800 text-gray-100 px-6 py-4 rounded">
+              <h2 className="text-lg text-center mb-4">Sales by Country</h2>
+              <BarCountryChart chartData={countryData} />
+            </div>
+          </div>
         </div>
 
+        {/* RIGHT COLUMN */}
         <div className="flex flex-col gap-6">
           <div className="overflow-hidden rounded-lg">
             <img
