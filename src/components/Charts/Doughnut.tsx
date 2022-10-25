@@ -18,6 +18,6 @@ const options = {
   },
 };
 
-export function DoughnutChat({ chartData }: any) {
+export function DoughnutChart({ chartData }: any) {
   return <Doughnut data={chartData} options={options} />;
 }

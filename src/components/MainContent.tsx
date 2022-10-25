@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Header } from "./Header";
 import { MainCard } from "./MainCard";
 
-import { DoughnutChat } from "./Charts/Doughnut";
+import { DoughnutChart } from "./Charts/Doughnut";
 import { LineSalesChart } from "./Charts/LineSales";
 import { PortfolioData, SalesData, CountryData } from "../context/ChartsData";
 
@@ -110,7 +110,7 @@ export function MainContent() {
           </div>
           <div className="px-4 py-3 rounded bg-gray-800 text-gray-100 relative">
             <h2 className="text-lg text-center mb-4">investment portfolio</h2>
-            <DoughnutChat chartData={portfolioData} />
+            <DoughnutChart chartData={portfolioData} />
             <CurrencyDollar
               size={38}
               className="absolute left-1/2 -translate-x-2/4 top-[42%]"
