@@ -4,6 +4,14 @@ ChartJS.register(...registerables);
 
 const options = {
   plugins: {
+    tooltip: {
+      callbacks: {
+        label: function (tooltipItem: { label: string; raw: string }) {
+          console.log(tooltipItem);
+          return tooltipItem.label + ": " + "$" + tooltipItem.raw;
+        },
+      },
+    },
     legend: {
       position: "bottom",
       labels: {
