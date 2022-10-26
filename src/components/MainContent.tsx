@@ -14,6 +14,7 @@ import {
   Wallet,
 } from "phosphor-react";
 import { BarCountryChart } from "./Charts/BarCountry";
+import { Highlight } from "./Highlight";
 
 export function MainContent() {
   const [portfolioData, setPortfolioData] = useState({
@@ -108,6 +109,7 @@ export function MainContent() {
               className="w-full transition-transform hover:scale-110"
             />
           </div>
+
           <div className="px-4 py-3 rounded bg-gray-800 text-gray-100 relative">
             <h2 className="text-lg text-center mb-4">investment portfolio</h2>
             <DoughnutChart chartData={portfolioData} />
@@ -115,6 +117,14 @@ export function MainContent() {
               size={38}
               className="absolute left-1/2 -translate-x-2/4 top-[42%]"
             />
+          </div>
+
+          <div className="p-4 rounded bg-gray-800 text-gray-100 shadow-bt-inset">
+            <h2 className="text-lg text-center mb-4">highlight</h2>
+            <div className="flex flex-col">
+              <Highlight name="Stocks" percentage="+3" />
+              <Highlight name="Cryptocurrency" percentage="-5" />
+            </div>
           </div>
         </div>
       </div>

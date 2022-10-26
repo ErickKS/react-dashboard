@@ -55,6 +55,7 @@ module.exports = {
       },
       boxShadow: {
         "card-inset": "inset 3px 0 0 0 #61DAFB",
+        "bt-inset": "inset 0 -3px 0 0 #61DAFB",
       },
     },
   },
