@@ -15,6 +15,7 @@ import {
 } from "phosphor-react";
 import { BarCountryChart } from "./Charts/BarCountry";
 import { Highlight } from "./Highlight";
+import { TableListOrders } from "./TableListOrders";
 
 export function MainContent() {
   const [portfolioData, setPortfolioData] = useState({
@@ -98,6 +99,8 @@ export function MainContent() {
               <BarCountryChart chartData={countryData} />
             </div>
           </div>
+
+          <TableListOrders />
         </div>
 
         {/* RIGHT COLUMN */}

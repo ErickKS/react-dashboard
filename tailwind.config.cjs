@@ -23,6 +23,11 @@ module.exports = {
       red: {
         800: "#9c0303",
       },
+
+      green: {
+        500: "#50cd89",
+        900: "#1c3238",
+      },
     },
 
     fontSize: {
