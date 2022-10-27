@@ -7,6 +7,11 @@ const options = {
     mode: "index",
     intersect: false,
   },
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
   scales: {
     y: {
       ticks: {
@@ -22,10 +27,8 @@ const options = {
       },
     },
   },
-  plugins: {
-    legend: {
-      display: false,
-    },
+  animation: {
+    duration: 2000,
   },
 };
 

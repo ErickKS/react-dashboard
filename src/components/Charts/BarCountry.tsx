@@ -20,6 +20,9 @@ const options = {
       },
     },
   },
+  animation: {
+    duration: 2000,
+  },
 };
 
 export function BarCountryChart({ chartData }: any) {
