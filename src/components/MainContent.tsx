@@ -8,9 +8,9 @@ import { PortfolioData, SalesData, CountryData } from "../context/ChartsData";
 
 import {
   CurrencyDollar,
+  ShoppingCart,
   TrendDown,
   TrendUp,
-  UserPlus,
   Wallet,
 } from "phosphor-react";
 import { BarCountryChart } from "./Charts/BarCountry";
@@ -83,9 +83,9 @@ export function MainContent() {
               <TrendDown size={32} />
               Expenses
             </MainCard>
-            <MainCard amount="+ 14">
-              <UserPlus size={32} />
-              Clients
+            <MainCard amount="142">
+              <ShoppingCart size={32} />
+              Sales
             </MainCard>
           </div>
 
