@@ -1,9 +1,9 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogoLogin } from "../Logo";
-import { Input } from "../components/Input";
-import { Checkbox } from "../components/Checkbox";
-import { Button } from "../components/Button";
+import { Input } from "../components/Login/Input";
+import { Checkbox } from "../components/Login/Checkbox";
+import { Button } from "../components/Login/Button";
 
 import { User, LockKey, AddressBook } from "phosphor-react";
 

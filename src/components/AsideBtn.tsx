@@ -6,9 +6,10 @@ interface asideBtnProps {
   active: boolean;
   to: string;
   children: ReactNode;
+  onClick?: () => void;
 }
 
-export function AsideBtn({ active, to, children }: asideBtnProps) {
+export function AsideBtn({ active, to, children, onClick }: asideBtnProps) {
   return (
     <Link
       to={to}
@@ -19,6 +20,7 @@ export function AsideBtn({ active, to, children }: asideBtnProps) {
           "hover:bg-gray-800 hover:translate-x-1": active === false,
         }
       )}
+      onClick={onClick}
     >
       {children}
     </Link>

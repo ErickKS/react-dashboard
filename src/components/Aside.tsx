@@ -1,7 +1,7 @@
 import { LogoDash } from "../Logo";
 import { AsideBtn } from "./AsideBtn";
 
-import { Layout, Gear } from "phosphor-react";
+import { Layout, Gear, ShoppingBag } from "phosphor-react";
 
 export function Aside() {
   return (
@@ -12,6 +12,15 @@ export function Aside() {
         <AsideBtn to="/main" active={true}>
           <Layout size={24} />
           dashboard
+        </AsideBtn>
+
+        <AsideBtn
+          to="/main"
+          active={false}
+          onClick={() => alert("under construction")}
+        >
+          <ShoppingBag size={24} />
+          eCommerce
         </AsideBtn>
 
         <AsideBtn to="/main" active={false}>
