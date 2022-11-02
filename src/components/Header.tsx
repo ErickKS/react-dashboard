@@ -76,7 +76,7 @@ export function Header({ title }: HeaderProps) {
                 <Popover.Arrow className="fill-gray-400" />
               </Popover.Content>
             </Popover.Root>
-            <a href="/" title="Logout">
+            <a href="./" title="Logout">
               <SignOut
                 size={24}
                 className="cursor-pointer transition-colors hover:text-cyan-500"

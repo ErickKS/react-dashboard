@@ -129,6 +129,7 @@ export function Login() {
       <a
         href="https://github.com/ErickKS"
         className="mt-4 text-gray-400 underline"
+        target="_blank"
       >
         Developed by Erick Kuwahara
       </a>
