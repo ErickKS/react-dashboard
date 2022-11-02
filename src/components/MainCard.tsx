@@ -7,7 +7,7 @@ interface MainCardProps {
 
 export function MainCard({ children, amount }: MainCardProps) {
   return (
-    <div className="flex flex-col gap-2 w-full px-6 py-4 bg-gray-800 rounded-r-md shadow-card-inset">
+    <div className="flex flex-col gap-2 w-full px-6 py-4 bg-gray-800 rounded-r-md shadow-card-inset 2xl:py-2 3xs:col-span-2">
       <div className="flex gap-3 items-center text-gray-100 text-lg">
         {children}
       </div>

@@ -56,7 +56,7 @@ export function Login() {
   }
 
   return (
-    <div className="w-screen h-screen bg-gray-900 flex flex-col items-center justify-center text-gray-100">
+    <div className="w-screen h-screen flex flex-col items-center justify-center px-5 text-gray-100">
       <header className="flex flex-col items-center justify-center">
         <LogoLogin />
 

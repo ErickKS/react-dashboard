@@ -63,6 +63,18 @@ module.exports = {
         "bt-inset": "inset 0 -3px 0 0 #61DAFB",
       },
     },
+
+    screens: {
+      "3xs": { max: "480px" },
+      "2xs": { max: "520px" },
+      xs: { max: "670px" },
+      sm: { max: "800px" },
+      md: { max: "869px" },
+      lg: { max: "1160px" },
+      xl: { max: "1240px" },
+      "2xl": { max: "1376px" },
+      "3xl": { max: "1535px" },
+    },
   },
   plugins: [],
 };

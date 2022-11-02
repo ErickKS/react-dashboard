@@ -19,17 +19,17 @@ export const PortfolioData = [
 export const SalesData = [
   {
     id: 1,
-    month: "February",
+    month: "Feb",
     sales: 12,
   },
   {
     id: 2,
-    month: "March",
+    month: "Mar",
     sales: 22,
   },
   {
     id: 3,
-    month: "April",
+    month: "Apr",
     sales: 29,
   },
   {
@@ -39,22 +39,22 @@ export const SalesData = [
   },
   {
     id: 5,
-    month: "June",
+    month: "Jun",
     sales: 32,
   },
   {
     id: 6,
-    month: "July",
+    month: "Jul",
     sales: 44,
   },
   {
     id: 6,
-    month: "August",
+    month: "Aug",
     sales: 36,
   },
   {
     id: 6,
-    month: "September",
+    month: "Sep",
     sales: 43,
   },
 ];

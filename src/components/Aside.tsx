@@ -5,7 +5,7 @@ import { Layout, Gear, ShoppingBag } from "phosphor-react";
 
 export function Aside() {
   return (
-    <div className="w-full h-full flex flex-col items-center gap-10 p-4">
+    <div className="w-full h-fit flex flex-col items-center gap-10 p-4 sticky top-0 md:hidden">
       <LogoDash />
 
       <div className="w-full flex flex-col gap-4">

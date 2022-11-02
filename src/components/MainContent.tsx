@@ -64,13 +64,13 @@ export function MainContent() {
   });
 
   return (
-    <div className="flex flex-col gap-8 p-4">
-      <Header title="Dashboard" />
+    <div className="flex flex-col gap-8 p-4 lg:gap-5 md:col-span-2">
+      <Header title="Dashboard"/>
 
-      <div className="grid grid-cols-[1fr_288px] gap-9">
+      <div className="grid grid-cols-[1fr_288px] gap-9 3xl:grid-cols-[1fr_258px] 3xl:gap-6 xl:flex xl:flex-col">
         {/* LEFT COLUMN */}
         <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-4 gap-6 3xl:grid-cols-2 2xl:gap-4">
             <MainCard amount="$ 9.800">
               <Wallet size={32} />
               Your wallet
@@ -89,7 +89,7 @@ export function MainContent() {
             </MainCard>
           </div>
 
-          <div className="grid gap-6 grid-cols-2">
+          <div className="grid gap-6 grid-cols-2 sm:grid-cols-1">
             <div className="bg-gray-800 text-gray-100 px-6 py-4 rounded">
               <h2 className="text-lg text-center mb-4">Sales Overview</h2>
               <LineSalesChart chartData={salesData} />
@@ -104,25 +104,25 @@ export function MainContent() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col gap-6">
-          <div className="overflow-hidden rounded-lg">
+        <div className="flex flex-col gap-6 xl:grid grid-cols-[1fr_360px] xs:gap-4 xs:grid-cols-1">
+          <div className="overflow-hidden rounded-lg xl:h-52 xs:hidden">
             <img
               src="./message.jpg"
               alt="inspirational message"
-              className="w-full transition-transform hover:scale-110"
+              className="h-full w-full object-cover transition-transform hover:scale-110"
             />
           </div>
 
-          <div className="px-4 py-3 rounded bg-gray-800 text-gray-100 relative">
+          <div className="w-full px-4 py-3 rounded bg-gray-800 text-gray-100 relative xl:row-span-2 xl:flex xl:flex-col xl:justify-center xs:max-w-xs xs:mx-auto">
             <h2 className="text-lg text-center mb-4">investment portfolio</h2>
             <DoughnutChart chartData={portfolioData} />
             <CurrencyDollar
               size={38}
-              className="absolute left-1/2 -translate-x-2/4 top-[42%]"
+              className="absolute left-1/2 -translate-x-2/4 top-[42%] xl:top-1/2 xl:-translate-y-2/4"
             />
           </div>
 
-          <div className="p-4 rounded bg-gray-800 text-gray-100 shadow-bt-inset">
+          <div className="p-4 rounded bg-gray-800 text-gray-100 shadow-bt-inset xs:max-w-xs xs:w-full xs:mx-auto">
             <h2 className="text-lg text-center mb-4">highlight</h2>
             <div className="flex flex-col">
               <Highlight name="Stocks" percentage="+3" />
