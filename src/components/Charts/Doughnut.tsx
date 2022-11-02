@@ -1,13 +1,12 @@
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, registerables } from "chart.js";
+import { Chart as ChartJS, ChartOptions, registerables } from "chart.js";
 ChartJS.register(...registerables);
 
-const options = {
+const options: ChartOptions<"doughnut"> = {
   plugins: {
     tooltip: {
       callbacks: {
-        label: function (tooltipItem: { label: string; raw: string }) {
-          console.log(tooltipItem);
+        label: function (tooltipItem: any) {
           return tooltipItem.label + ": " + "$" + tooltipItem.raw;
         },
       },

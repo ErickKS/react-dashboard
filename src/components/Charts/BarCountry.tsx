@@ -1,8 +1,8 @@
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, registerables } from "chart.js";
+import { Chart as ChartJS, ChartOptions, registerables } from "chart.js";
 ChartJS.register(...registerables);
 
-const options = {
+const options: ChartOptions<"bar"> = {
   plugins: {
     legend: {
       display: false,
